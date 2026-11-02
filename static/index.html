@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101a16">
+  <title>PlayField | Book. Play. Belong.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">P</span><span>playfield<span class="brand-dot">.</span></span></a>
+  <nav><a href="#facilities">Find a turf</a><a href="#games">Join a game</a><a href="#how">How it works</a></nav>
+  <button class="btn btn-dark" id="openProfile">Create profile <span>↗</span></button>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="live-dot"></span> YOUR GAME STARTS HERE</div>
+    <h1>Find your field.<br><span>Find your people.</span></h1>
+    <p>Book the perfect turf and build your squad. Less planning, more playing.</p>
+    <div class="hero-actions"><a class="btn btn-lime" href="#facilities">Explore turfs <span>↗</span></a><a class="text-link" href="#games">Find players <span>→</span></a></div>
+    <div class="hero-proof"><div class="avatar-stack"><i>T</i><i>R</i><i>A</i><i>+</i></div><div><b>Made for the love of the game</b><small>Book a slot. Bring your squad. Or find one.</small></div></div>
+  </div>
+  <div class="hero-visual">
+    <div class="image-overlay"></div>
+    <div class="floating-tag tag-top"><span class="tag-icon">⚽</span><span><b>Game on</b><small>Find your next match</small></span></div>
+    <div class="floating-tag tag-bottom"><span class="pulse-icon">↗</span><span><b>Open games near you</b><small>Meet your new teammates</small></span><span class="tag-arrow">↗</span></div>
+    <div class="hero-caption"><span>01 / 03</span><span class="caption-line"></span><span>MUMBAI · INDIA</span></div>
+  </div>
+</section>
+<section class="stats-row" id="stats">
+  <div><strong id="statFacilities">—</strong><span>Sports facilities</span></div><div><strong id="statSlots">—</strong><span>Upcoming slots</span></div><div><strong id="statPlayers">—</strong><span>Players in the community</span></div><div><strong id="statGames">—</strong><span>Open games</span></div>
+</section>
+<section class="section" id="facilities">
+  <div class="section-head"><div><div class="eyebrow">PICK YOUR PLAYGROUND</div><h2>Find your <span>next turf.</span></h2><p>Good games start with a great place to play.</p></div><a class="text-link" href="#slots">Browse available slots <span>→</span></a></div>
+  <div class="filter-bar"><label class="searchbox"><span>⌕</span><input id="searchInput" placeholder="Search by turf or area..." /></label><select id="sportFilter"><option value="all">All sports</option><option>Football</option><option>Badminton</option><option>Cricket</option><option>Basketball</option></select><button class="btn btn-outline" id="searchButton">Search ↗</button></div>
+  <div class="facility-grid" id="facilityGrid"><div class="loading-card">Loading facilities…</div></div>
+</section>
+<section class="booking-section" id="slots">
+  <div class="booking-intro"><div class="eyebrow">LOCK IN YOUR GAME</div><h2>Pick a time.<br><span>Make it happen.</span></h2><p>Choose a turf and an available time slot. Bookings in this demo are stored in the local project database.</p><div class="booking-note"><span>✓</span> Instant demo confirmation <span>✓</span> No real payment collected</div></div>
+  <div class="slot-panel"><div class="panel-title"><div><h3>Available slots</h3><p>Upcoming availability</p></div><input id="dateFilter" type="date" aria-label="Filter by date"></div><div id="slotList" class="slot-list"><div class="empty-state">Loading slots…</div></div></div>
+</section>
+<section class="section games-section" id="games">
+  <div class="section-head"><div><div class="eyebrow">SQUAD UP</div><h2>Good games need <span>good people.</span></h2><p>Join an open game or create one after booking a slot.</p></div><button class="btn btn-dark" id="openGameModal">＋ Host a game</button></div>
+  <div class="games-grid" id="gamesGrid"><div class="loading-card">Finding open games…</div></div>
+</section>
+<section class="how-section" id="how"><div class="eyebrow">NO COMPLICATED GAME PLAN</div><h2>Three steps. <span>Game on.</span></h2><div class="steps"><article><span class="step-no">01</span><div class="step-icon">⌕</div><h3>Find your turf</h3><p>Explore sports facilities and check the available slots that work for you.</p></article><article><span class="step-no">02</span><div class="step-icon">▣</div><h3>Book your time</h3><p>Select a future slot and confirm your demo booking in a few clicks.</p></article><article><span class="step-no">03</span><div class="step-icon">↗</div><h3>Build your squad</h3><p>Open your game to other players or join a game that needs you.</p></article></div></section>
+<section class="cta"><div><div class="eyebrow">YOUR TEAM IS OUT THERE</div><h2>Stop saying “we should play”.<br><span>Start picking a time.</span></h2></div><a href="#facilities" class="btn btn-lime">Find your next game ↗</a></section>
+</main>
+<footer><a class="brand" href="#"><span class="brand-mark">P</span><span>playfield<span class="brand-dot">.</span></span></a><span>Built for the game. © 2026 PlayField demo</span><span>Book · Play · Belong</span></footer>
+
+<div class="modal-backdrop" id="profileModal"><div class="modal"><button class="close-modal" data-close="profileModal">×</button><div class="eyebrow">JOIN THE COMMUNITY</div><h2>Create your player profile</h2><p class="modal-sub">Your profile helps the demo connect bookings and games to a player.</p>
+<form id="profileForm"><label>Full name<input name="player_name" required minlength="2" placeholder="e.g. Tanishq Patil"></label><div class="form-row"><label>Phone<input name="phone" required placeholder="Phone number"></label><label>Email<input name="email" required type="email" placeholder="you@example.com"></label></div><label>Home location<input name="home_location" value="Mumbai" required></label><label>Skill level<select name="skill_level"><option>beginner</option><option selected>intermediate</option><option>advanced</option><option>competitive</option></select></label><button class="btn btn-lime full-btn" type="submit">Create profile ↗</button></form></div></div>
+<div class="modal-backdrop" id="gameModal"><div class="modal"><button class="close-modal" data-close="gameModal">×</button><div class="eyebrow">BRING THE SQUAD TOGETHER</div><h2>Host an open game</h2><p class="modal-sub">First book a slot, then use the booking ID shown in the confirmation.</p><form id="gameForm"><label>Host player<select name="host_player_id" id="hostPlayer" required></select></label><label>Confirmed booking<select name="booking_id" id="hostBooking" required></select></label><label>Sport<select name="sport_type"><option>Football</option><option>Cricket</option><option>Badminton</option><option>Basketball</option></select></label><div class="form-row"><label>Total roster size<input type="number" name="roster_size" min="2" max="30" value="10" required></label><label>Minimum skill<select name="minimum_skill_level"><option>beginner</option><option>intermediate</option><option>advanced</option><option>competitive</option></select></label></div><button class="btn btn-lime full-btn" type="submit">Publish open game ↗</button></form></div></div>
+<div id="toast" class="toast" role="status"></div>
+<script src="/static/app.js"></script>
+</body></html>
